@@ -1,0 +1,35 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21" style="background-color:#FFFFFF;">
+    <ion-header-bar class="bar-dark">
+      <div class="title">App</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header ">
+      <ion-list id="app-list1">
+        <ion-item ui-sref="app.dashboard" menu-close="">Home</ion-item>
+        <ion-item ui-sref="app.serviceHistory" menu-close="" data-ng-if="appVars.auth.isLogin">Service History</ion-item>
+        <ion-item ui-sref="app.settings" menu-close="" data-ng-if="appVars.auth.isLogin">Settings</ion-item>
+        <ion-item ui-sref="app.payment" menu-close="" data-ng-if="appVars.auth.isLogin">Payments</ion-item>
+        <ion-item ui-sref="app.notifications" menu-close="" data-ng-if="appVars.auth.isLogin">Notifications</ion-item>
+        <ion-item ui-sref="app.profile" menu-close="" data-ng-if="appVars.auth.isLogin">Profile</ion-item>
+        <ion-item ui-sref="app.help" menu-close="">Help</ion-item>
+        <ion-item ui-sref="app.about" menu-close="">About</ion-item>
+        <ion-item ui-sref="app.support" menu-close="">Support</ion-item>
+        <ion-item ui-sref="app.fAQs" menu-close="">FAQs</ion-item>
+        <ion-item ui-sref="app.rateCards" menu-close="">Rate Cards</ion-item>
+        <ion-item ui-sref="app.promotions" menu-close="" data-ng-if="appVars.auth.isLogin">Promotions</ion-item>
+        <ion-item ui-sref="app.offers" menu-close="" data-ng-if="appVars.auth.isLogin">Offers</ion-item>
+        <ion-item ui-sref="app.beAVendor" menu-close="">Become Vendor</ion-item>
+        <ion-item ui-sref="app.login" menu-close="" data-ng-if="!appVars.auth.isLogin">Login</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
